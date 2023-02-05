@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Auth::routes(['register'=>false]);
+Auth::routes();
 
 Route::get('dashboard', [HomeController::class, 'index'])->name('dashboard');
+
+Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
+    Route::get('/',function(){
+        return "A";
+    });
+});
