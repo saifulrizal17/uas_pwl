@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaundryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,17 +13,18 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Sebelum Login
 Route::get('/', function () {
     return view('pages.home');
 });
 
+// Login User 
 Auth::routes();
 
-Route::get('dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('user', [HomeController::class, 'index'])->name('user');
 
-Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
-    Route::get('/',function(){
-        return "A";
-    });
+
+// Login Admin
+Route::prefix('/')->middleware('auth','isAdmin')->group(function(){
+    Route::resource('admin', LaundryController::class);
 });
