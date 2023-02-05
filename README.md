@@ -22,9 +22,14 @@ Aplikasi Laundry untuk tugas akhir mata kuliah Pemrograman Web Lanjut | Pak Saif
     php artisan serve
 
 ```
-# Akun Admin
+# Akun
+## Admin
 ```shell
     email    : admin@gmail.com
-
+    password : 123
+```
+## User
+```shell
+    email    : user@gmail.com
     password : 123
 ```
