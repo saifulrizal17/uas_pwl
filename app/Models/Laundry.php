@@ -12,5 +12,8 @@ class Laundry extends Model
     protected $fillable = [
   'nama',
   'nomerhp',
+  'alamat',
+  'berat',
+  'jenis_paket'
     ];
 }

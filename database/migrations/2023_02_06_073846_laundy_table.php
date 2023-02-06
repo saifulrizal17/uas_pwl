@@ -16,7 +16,10 @@ return new class extends Migration
         Schema::create('laundry', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
+            $table->string('alamat');
             $table->integer('nomerhp');
+            $table->integer('berat');
+            $table->integer('jenis_paket');
             $table->timestamps();
         });
     }
