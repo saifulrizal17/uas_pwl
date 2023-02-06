@@ -9,4 +9,8 @@ class Laundry extends Model
 {
     use HasFactory;
     protected $table = 'laundry';
+    protected $fillable = [
+  'nama',
+  'nomerhp',
+    ];
 }

@@ -28,3 +28,4 @@ Route::get('user', [HomeController::class, 'index'])->name('user');
 Route::prefix('/')->middleware('auth','isAdmin')->group(function(){
     Route::resource('admin', LaundryController::class);
 });
+
