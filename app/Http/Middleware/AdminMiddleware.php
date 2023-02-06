@@ -24,7 +24,7 @@ class AdminMiddleware
             if(Auth::user()->role == '1'){
                 return $next($request);
             } else {
-                return redirect('/dashboard')->with('message', 'Bukan Admin Coy');
+                return redirect('/user')->with('message', 'Bukan Admin Coy');
             };
         } else {
             return redirect('/login')->with('message', 'Login dulu kawan');

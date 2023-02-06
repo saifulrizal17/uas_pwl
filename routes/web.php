@@ -26,5 +26,6 @@ Route::get('user', [HomeController::class, 'index'])->name('user');
 
 // Login Admin
 Route::prefix('/')->middleware('auth','isAdmin')->group(function(){
-    Route::resource('admin', LaundryController::class);
+    // Route::resource('admin', LaundryController::class);
+    Route::get('/admin', [LaundryController::class, 'index']);
 });
