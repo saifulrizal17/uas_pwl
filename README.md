@@ -13,9 +13,9 @@ Aplikasi Laundry untuk tugas akhir mata kuliah Pemrograman Web Lanjut | Pak Saif
 
     npm i
 
-    php artisan migrate:fresh --seed
-
     php artisan key:generate
+
+    php artisan migrate:fresh --seed
 
     npm run dev
 
