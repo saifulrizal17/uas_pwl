@@ -40,18 +40,18 @@ class LaundryController extends Controller
     {
             //
             $this->validate($request, [
-                'nama' => 'required|unique:padi',
+                'nama' => 'required|unique:laundry',
                 'nomerhp' => 'required',
              
             ]);
-            Padi::create([
+            Laundry::create([
                 'nama' => $request->nama,
                 'nomerhp' => $request->nomerhp,
 
             
             ]);
     
-            return redirect()->route('laundry.dashboard');
+            return redirect()->route('admin.index');
     }
 
     /**
@@ -92,16 +92,16 @@ class LaundryController extends Controller
         //
         $this->validate($request, [
             'nama' => 'required',
-            'nomorhp' => 'required',
+            'nomerhp' => 'required',
             
         ]);
         $laundry = Laundry::find($id);
         $laundry->nama = $request->nama;
-        $laundry->nomorhp = $request->nomorhp;
+        $laundry->nomerhp = $request->nomerhp;
     
         $laundry->save();
 
-        return redirect()->route('laundry.index');
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -115,6 +115,6 @@ class LaundryController extends Controller
         //
         $laundry = Laundry::find($id);
         $laundry->delete();
-        return redirect()->route('laundry.index');
+        return redirect()->route('admin.index');
     }
 }
