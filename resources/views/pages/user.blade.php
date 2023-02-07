@@ -14,39 +14,38 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{!! asset('/Gambar/1.png') !!}" class="img-fluid" alt=""> 
+                        <img src="{!! asset('/img/Paket1.png') !!}" class="img-fluid" alt=""> 
                         <div class="card-body">
-                          <h2 class="card-title">Harian</h2>
+                          <h2 class="card-title">Paket Cuci</h2>
+                          <p class="card-text">Paket ini meliputi layanan pembersihan pakaian seperti baju, celana, dll. Proses cuci dilakukan dengan mesin cuci berkualitas dan bahan pembersih yang berkualitas, sehingga bahan pakaian akan terasa bersih dan wangi.</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Cuci Setrika / 1 Hari : Rp.15.000/Kg</li>
-                          <li class="list-group-item">Cuci Setrika / 3 Hari : Rp.10.000/Kg</li>
-                          <li class="list-group-item">Cuci Setrika / 7 Hari : Rp.7.000/Kg</li>
+                          <li class="list-group-item">Harga : Rp.10.000/Kg</li>
                         </ul>
                     </div>                   
                 </div>
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{!! asset('/Gambar/2.png') !!}" class="card-img-top" alt="...">
+                        <img src="{!! asset('/img/Paket2.png') !!}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h2 class="card-title">Express</h2>
+                          <h2 class="card-title">Paket Setrika</h2>
+                          <p class="card-text">Paket ini meliputi layanan setrika pakaian saja yang sudah dicuci dirumah sehingga memiliki tampilan yang rapi dan mengkilap. Proses setrika dilakukan dengan mesin setrika yang berkualitas, sehingga bahan pakaian akan terasa lebih kenyal dan tidak kusut</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Cuci Setrika / 4 Jam : Rp.30.000/Kg</li>
-                          <li class="list-group-item">Cuci Setrika / 6 Jam : Rp.25.000/Kg</li>
-                          <li class="list-group-item">Cuci Setrika / 12 Jam : Rp.20.000/Kg</li>
+                          <li class="list-group-item">Harga : Rp.5.000/Kg</li>
                         </ul>
                     </div>  
                 </div>
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{!! asset('/Gambar/3.png') !!}" class="card-img-top" alt="...">
+                        <img src="{!! asset('/img/Paket3.png') !!}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h2 class="card-title">Express Malam</h2>
+                          <h2 class="card-title">Paket Komplit</h2>
+                          <p class="card-text">Paket ini meliputi layanan cuci dan setrika sekaligus. Anda akan mendapatkan pakaian yang bersih, wangi, rapi, dan tidak kusut. Proses cuci dan setrika dilakukan dengan mesin yang berkualitas dan bahan pembersih berkualitas. Dengan memilih paket ini, Anda akan lebih mudah dan praktis dalam menjaga kebersihan dan tampilan pakaian.
+                        </p>
                         </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">Express Malam Cuci Setrika Malam Selesai Pagi : Rp.35.000/Kg</li>
-                          <li class="list-group-item">Express Malam Cuci Setrika 4 - 6 Jam : Rp.40.000/Kg</li>
+                          <li class="list-group-item">Harga : Rp.15.000/Kg</li>
                         </ul>
                     </div>
                 </div>
@@ -72,20 +71,19 @@
                                 <input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Nomor Hp </span>
+                                <input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Bobot" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <span class="input-group-text" id="basic-addon2">Kg</span>
                             </div>
                             <div class="form-group row px-3">
                                 <select class="form-select " aria-label="Default select example">
                                     <option selected>Jenis Paket</option>
-                                    <option value="1">Cuci Setrika / 1 Hari (Rp.15.000/Kg) </option>
-                                    <option value="2">Cuci Setrika / 5 Hari (Rp.10.000/Kg)</option>
-                                    <option value="3">Cuci Setrika / 7 Hari (Rp.7.000/Kg)</option>
-                                    <option value="4">Cuci Setrika / 4 Jam  (Rp.30.000/Kg)</option>
-                                    <option value="5">Cuci Setrika / 6 Jam  (Rp.25.000/Kg)</option>
-                                    <option value="6">Cuci Setrika / 12 Jam (Rp.20.000/Kg)</option>
-                                    <option value="7">Express Malam Cuci Setrika Malam Selesai Pagi (Rp.35.000/Kg)</option>
-                                    <option value="8">Express Malam Cuci Setrika 4 - 6 Jam (Rp.40.000/Kg)</option>
+                                    <option value="1">Paket Cuci (Rp.10.000/Kg) </option>
+                                    <option value="2">Paket Setrika (Rp.5.000/Kg)</option>
+                                    <option value="3">Paket Komplit (Rp.15.000/Kg)</option>
                                   </select>
                             </div>
                             <form action=""></form>
