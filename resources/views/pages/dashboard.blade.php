@@ -4,17 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="mb-2">
+            <div class="mb-3">
                 <a href="{{ route('admin.create') }}"><button type="submit" class="btn btn-primary">Tambah Data</button></a>
             </div>
-            {{-- <form action="{{ route('search') }}" method="get">
+            <form action="{{ route('admin.index') }}" method="get">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Bis" name="bis" id="input1">
-                    <input type="text" class="form-control" placeholder="Waktu Datang" name="waktu_datang" id="input2">
-                    <input type="text" class="form-control" placeholder="asal" name="asal" id="input3">
+                    <input type="text" class="form-control" placeholder="Masukkan Nama..." name="nama" id="nama">
                     <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </div>
-            </form> --}}
+            </form>
             <div class="card">
                 <table class="table">
                     <thead>
