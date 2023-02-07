@@ -16,9 +16,15 @@ class LaundryController extends Controller
     public function index(Request $request)
     {
         //
-        $datas = Laundry::paginate(2);
-        
-        return view('pages.dashboard', compact('datas'));
+         if($request){
+            $nama = $request -> nama;
+            $datas = Laundry::where('nama', 'like', '%'.$nama.'%')->get();
+             $datas = Laundry::paginate(2);
+            return view('pages.dashboard', compact('datas'));
+        } else {
+            $datas = Laundry::paginate(2);
+            return view('pages.dashboard', compact('datas'));
+        }
     }
 
     /**
