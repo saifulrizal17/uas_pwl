@@ -66,6 +66,7 @@
                 
                 <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>
+            <a href="/admin"> <button type="submit" class="btn btn-primary">Kembali</button></a>
         </div>
     </div>
 </div>
