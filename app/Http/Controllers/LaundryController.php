@@ -59,8 +59,6 @@ class LaundryController extends Controller
                 'alamat' => $request->alamat,
                 'berat' => $request->berat,
                 'jenis_paket' => $request->jenis_paket,
-
-            
             ]);
     
             return redirect()->route('admin.index');

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('nama');
             $table->string('alamat');
-            $table->integer('nomerhp');
+            $table->BigInteger('nomerhp');
             $table->integer('berat');
             $table->integer('jenis_paket');
             $table->timestamps();
