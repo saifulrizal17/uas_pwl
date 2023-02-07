@@ -13,10 +13,11 @@ class LaundryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $datas = Laundry::all();
+        $datas = Laundry::paginate(2);
+        
         return view('pages.dashboard', compact('datas'));
     }
 
