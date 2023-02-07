@@ -59,12 +59,9 @@ class LaundryController extends Controller
                 'alamat' => $request->alamat,
                 'berat' => $request->berat,
                 'jenis_paket' => $request->jenis_paket,
-<<<<<<< HEAD
                 'total_harga' => $request->jenis_paket * $request->berat,
 
             
-=======
->>>>>>> 42073f2e48fd0e87c015ad9bcc7bf2a6f21dc37c
             ]);
     
             return redirect()->route('admin.index');
