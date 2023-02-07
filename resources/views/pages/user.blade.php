@@ -13,7 +13,7 @@
             @endif
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src="{!! asset('/img/Paket1.png') !!}" class="img-fluid" alt=""> 
                         <div class="card-body">
                           <h2 class="card-title">Paket Cuci</h2>
@@ -25,7 +25,7 @@
                     </div>                   
                 </div>
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src="{!! asset('/img/Paket2.png') !!}" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h2 class="card-title">Paket Setrika</h2>
@@ -37,7 +37,7 @@
                     </div>  
                 </div>
                 <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src="{!! asset('/img/Paket3.png') !!}" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h2 class="card-title">Paket Komplit</h2>
@@ -78,7 +78,7 @@
                                 <input type="text" class="form-control" placeholder="Bobot" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <span class="input-group-text" id="basic-addon2">Kg</span>
                             </div>
-                            <div class="form-group row px-3">
+                            <div class="form-group row px-2">
                                 <select class="form-select " aria-label="Default select example">
                                     <option selected>Jenis Paket</option>
                                     <option value="1">Paket Cuci (Rp.10.000/Kg) </option>
