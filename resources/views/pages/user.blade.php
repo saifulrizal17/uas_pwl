@@ -57,41 +57,43 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Nama  </span>
-                                <input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1">
+                        <form action="{{ route('store') }}" method="post">
+                            @csrf
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Alamat</span>
-                                <input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1">
+                            <div class="modal-body">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Nama  </span>
+                                    <input type="text" class="form-control" id="nama" name="nama" aria-label="name" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Alamat</span>
+                                    <input type="text" class="form-control" id="alamat" name="alamat" aria-label="name" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Nomor Hp </span>
+                                    <input type="text" class="form-control" id="nama" name="nomerhp" aria-label="nomerhp" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Bobot" id="berat" name="berat" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="input-group-text" id="basic-addon2">Kg</span>
+                                </div>
+                                <div class="form-group row px-2">
+                                    <select class="form-select " aria-label="Default select example" id="nama" name="jenis_paket">
+                                        <option selected>Jenis Paket</option>
+                                        <option value="1">Paket Cuci (Rp.10.000/Kg) </option>
+                                        <option value="2">Paket Setrika (Rp.5.000/Kg)</option>
+                                        <option value="3">Paket Komplit (Rp.15.000/Kg)</option>
+                                      </select>
+                                </div>
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Nomor Hp </span>
-                                <input type="text" class="form-control"  aria-label="name" aria-describedby="basic-addon1">
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                                <button type="submit" class="btn btn-primary">Kirim</button>
                             </div>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Bobot" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <span class="input-group-text" id="basic-addon2">Kg</span>
-                            </div>
-                            <div class="form-group row px-2">
-                                <select class="form-select " aria-label="Default select example">
-                                    <option selected>Jenis Paket</option>
-                                    <option value="1">Paket Cuci (Rp.10.000/Kg) </option>
-                                    <option value="2">Paket Setrika (Rp.5.000/Kg)</option>
-                                    <option value="3">Paket Komplit (Rp.15.000/Kg)</option>
-                                  </select>
-                            </div>
-                            <form action=""></form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div> 

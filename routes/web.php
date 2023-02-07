@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LaundryController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +22,7 @@ Route::get('/', function () {
 // Login User 
 Auth::routes();
 Route::get('user', [HomeController::class, 'index'])->name('user');
+Route::post('user', [UserController::class, 'store'])->name('store');
 
 
 
