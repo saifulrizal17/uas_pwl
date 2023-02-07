@@ -131,9 +131,9 @@ h6 {
 /**
 * Desktop Navigation 
 */
-.navbar {
+/* .navbar {
   padding: 0;
-}
+} */
 
 .navbar ul {
   margin: 0;
@@ -358,7 +358,7 @@ h6 {
   background: url("../img/gambar1.png");
   background-size: 106%;
   position: relative;
-  margin-top: -25px;
+  margin-top: -22px;
   padding: 0;
 }
 

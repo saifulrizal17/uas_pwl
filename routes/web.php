@@ -20,7 +20,6 @@ Route::get('/', function () {
 
 // Login User 
 Auth::routes();
-
 Route::get('user', [HomeController::class, 'index'])->name('user');
 
 

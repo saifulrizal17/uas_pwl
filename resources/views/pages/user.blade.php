@@ -4,7 +4,13 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <h1>User Biasa</h1>
+            <h2>List Paket</h2>
+            @if (Session::has('message'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ Session::get('message') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            @endif
             <div class="row">
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
