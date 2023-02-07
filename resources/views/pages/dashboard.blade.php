@@ -21,7 +21,11 @@
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">nama</th>
-                        <th scope="col">nomor</th>
+                        <th scope="col">alamat</th>
+                        <th scope="col">Nomor HP</th>
+                        <th scope="col">berat</th>
+                        <th scope="col">Jenis Paket</th>
+                        <th scope="col">Total Harga</th>
                         <th scope="col">Aksi</th>
                       </tr>
                     </thead>
@@ -30,7 +34,19 @@
                             <tr>
                                 <th>{{ $key+1 }}</th>
                                 <th>{{ $data->nama }}</th>
+                                <th>{{ $data->alamat }}</th>
                                 <td>{{ $data->nomerhp }}</td>
+                                <th>{{ $data->berat }}</th>
+                                <td>@if($data->jenis_paket  === 8000)
+                                    Paket A
+                                    @elseif($data->jenis_paket  === 5000)
+                                    Paket B
+                                    @else
+                                    Paket C
+                                    @endif
+                                    {{-- {{ $data->jenis_paket }} --}}
+                                </td>
+                                <td>{{ $data->jenis_paket * $data->berat}}</td>
                                 <td class="d-flex">
                                     <a href="{{ route('admin.edit', $data->id) }}">
                                         <div class="btn-group btn-group-sm">

@@ -42,11 +42,17 @@ class LaundryController extends Controller
             $this->validate($request, [
                 'nama' => 'required|unique:laundry',
                 'nomerhp' => 'required',
+                'alamat' => 'required',
+                'berat' => 'required',
+                'jenis_paket' => 'required',
              
             ]);
             Laundry::create([
                 'nama' => $request->nama,
                 'nomerhp' => $request->nomerhp,
+                'alamat' => $request->alamat,
+                'berat' => $request->berat,
+                'jenis_paket' => $request->jenis_paket,
 
             
             ]);
@@ -93,11 +99,17 @@ class LaundryController extends Controller
         $this->validate($request, [
             'nama' => 'required',
             'nomerhp' => 'required',
+            'alamat' => 'required',
+            'berat' => 'required',
+            'jenis_paket' => 'required',
             
         ]);
         $laundry = Laundry::find($id);
         $laundry->nama = $request->nama;
         $laundry->nomerhp = $request->nomerhp;
+        $laundry->alamat = $request->alamat;
+        $laundry->berat = $request->berat;
+        $laundry->jenis_paket = $request->jenis_paket;
     
         $laundry->save();
 
