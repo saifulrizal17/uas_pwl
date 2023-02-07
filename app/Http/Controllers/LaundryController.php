@@ -18,8 +18,7 @@ class LaundryController extends Controller
         //
          if($request){
             $nama = $request -> nama;
-            $datas = Laundry::where('nama', 'like', '%'.$nama.'%')->get();
-             $datas = Laundry::paginate(2);
+            $datas = Laundry::where('nama', 'like', '%'.$nama.'%')->paginate(2);
             return view('pages.dashboard', compact('datas'));
         } else {
             $datas = Laundry::paginate(2);
