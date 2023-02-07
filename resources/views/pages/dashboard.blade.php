@@ -46,7 +46,7 @@
                                     @endif
                                     {{-- {{ $data->jenis_paket }} --}}
                                 </td>
-                                <td>{{ $data->jenis_paket * $data->berat}}</td>
+                                <td>{{ $data->total_harga}}</td>
                                 <td class="d-flex">
                                     <a href="{{ route('admin.edit', $data->id) }}">
                                         <div class="btn-group btn-group-sm">
