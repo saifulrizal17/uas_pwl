@@ -13,11 +13,17 @@ class LaundryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $datas = Laundry::all();
-        return view('pages.dashboard', compact('datas'));
+        if($request){
+            $nama = $request -> nama;
+            $datas = Laundry::where('nama', 'like', '%'.$nama.'%')->get();
+            return view('pages.dashboard', compact('datas'));
+        } else {
+            $datas = Laundry::all();
+            return view('pages.dashboard', compact('datas'));
+        }
     }
 
     /**
