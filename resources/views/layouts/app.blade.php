@@ -28,8 +28,9 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @auth
-                    <a href="/user" class="nav-link mx-3">List Paket</a>
-                    <a href="/admin" class="nav-link">Admin</a>
+                    <a href="/user" class="nav-link mx-2">List Paket</a>
+                    <a href="/user/list" class="nav-link mx-2">List Pesanan</a>
+                    <a href="/admin" class="nav-link mx-2">Admin</a>
                 @endauth
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

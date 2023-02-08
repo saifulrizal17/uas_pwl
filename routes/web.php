@@ -25,9 +25,8 @@ Route::get('user', [HomeController::class, 'index'])->name('user');
 Route::post('user', [UserController::class, 'store'])->name('store');
 Route::get('user/list', [UserController::class, 'index'])->name('index');
 
-
-
 // Login Admin
+// Route::resource('/admin', LaundryController::class)->middleware('auth','isAdmin');
 Route::prefix('/')->middleware('auth','isAdmin')->group(function(){
     Route::resource('/admin', LaundryController::class);
     // Route::get('/admin', [LaundryController::class, 'index']);
@@ -35,5 +34,6 @@ Route::prefix('/')->middleware('auth','isAdmin')->group(function(){
     // Route::get('/update/{id}', [LaundryController::class, 'update'])->name('update');
     Route::get('/delete/{id}', [LaundryController::class, 'destroy'])->name('destroy');
 });
+
 
 

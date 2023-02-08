@@ -5,12 +5,6 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <h2>List Paket</h2>
-            @if (Session::has('message'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                {{ Session::get('message') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
@@ -83,9 +77,9 @@
                                 <div class="form-group row px-2">
                                     <select class="form-select " aria-label="Default select example" id="nama" name="jenis_paket">
                                         <option selected>Jenis Paket</option>
-                                        <option value="1">Paket Cuci (Rp.10.000/Kg) </option>
-                                        <option value="2">Paket Setrika (Rp.5.000/Kg)</option>
-                                        <option value="3">Paket Komplit (Rp.15.000/Kg)</option>
+                                        <option value="10000">Paket Cuci (Rp.10.000/Kg) </option>
+                                        <option value="5000">Paket Setrika (Rp.5.000/Kg)</option>
+                                        <option value="15000">Paket Komplit (Rp.15.000/Kg)</option>
                                       </select>
                                 </div>
                             </div>

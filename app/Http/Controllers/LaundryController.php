@@ -60,8 +60,6 @@ class LaundryController extends Controller
                 'berat' => $request->berat,
                 'jenis_paket' => $request->jenis_paket,
                 'total_harga' => $request->jenis_paket * $request->berat,
-
-            
             ]);
     
             return redirect()->route('admin.index');
@@ -76,8 +74,8 @@ class LaundryController extends Controller
     public function show($id)
     {
         //
-        $laundry = Landry::find($id);
-        return view('pages.detail', compact('laundry'));
+        $laundry = Laundry::find($id);
+        return view('pages.invoice', compact('laundry'));
     }
 
     /**
@@ -117,7 +115,8 @@ class LaundryController extends Controller
         $laundry->alamat = $request->alamat;
         $laundry->berat = $request->berat;
         $laundry->jenis_paket = $request->jenis_paket;
-    
+        $laundry->total_harga = $request->jenis_paket * $request->berat;
+        $laundry->status = $request->status;
         $laundry->save();
 
         return redirect()->route('admin.index');

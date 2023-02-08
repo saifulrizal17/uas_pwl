@@ -48,9 +48,9 @@
                             <div class="mb-3">
                                 <label for="jenis_paket" class="form-label">Jenis Paket</label>
                                 <select class="form-select" id="jenis_paket" name="jenis_paket">
-                                    <option value="8000">Paket A</option>
+                                    <option value="10000">Paket A</option>
                                     <option value="5000">Paket B</option>
-                                    <option value="6000">Paket C</option>
+                                    <option value="15000">Paket C</option>
                                 </select>
                             </div>
                         </div>

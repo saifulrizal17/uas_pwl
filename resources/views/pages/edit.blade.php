@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form action="{{ route('admin.update', $laundry->id ) }}" method="post">
+            <form action="{{ route('admin.update', $laundry->id ) }}" method="post" class="mb-3">
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -47,7 +47,7 @@
                             <input type="text" class="form-control" id="berat" name="berat" placeholder="Nama berat" value="{{$laundry->berat}}">
                             @error('berat')
                                 <p class="text-danger">{{ $message }}</p>
-                                @enderror
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -56,14 +56,20 @@
                         <div class="mb-3">
                             <label for="jenis_paket" class="form-label">Jenis Paket</label>
                             <select class="form-select" id="jenis_paket" name="jenis_paket">
-                                <option value="8000">Paket A</option>
+                                <option value="10000">Paket A</option>
                                 <option value="5000">Paket B</option>
-                                <option value="6000">Paket C</option>
+                                <option value="15000">Paket C</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status" name="status">
+                                <option value="0" @if ($laundry->status == 0) selected @endif>Proses</option>
+                                <option value="1" @if ($laundry->status == 1) selected @endif>Selesai</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                
                 <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>
             <a href="/admin"> <button type="submit" class="btn btn-primary">Kembali</button></a>

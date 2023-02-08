@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('berat');
             $table->integer('jenis_paket');
             $table->integer('total_harga');
+            $table->boolean('status')->default('0');
             $table->timestamps();
         });
     }

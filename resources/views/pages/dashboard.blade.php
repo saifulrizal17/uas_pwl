@@ -26,6 +26,8 @@
                         <th scope="col">berat</th>
                         <th scope="col">Jenis Paket</th>
                         <th scope="col">Total Harga</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Invoice</th>
                         <th scope="col">Aksi</th>
                       </tr>
                     </thead>
@@ -37,7 +39,7 @@
                                 <th>{{ $data->alamat }}</th>
                                 <td>{{ $data->nomerhp }}</td>
                                 <th>{{ $data->berat }}</th>
-                                <td>@if($data->jenis_paket  === 8000)
+                                <td>@if($data->jenis_paket  === 10000)
                                     Paket A
                                     @elseif($data->jenis_paket  === 5000)
                                     Paket B
@@ -47,6 +49,10 @@
                                     {{-- {{ $data->jenis_paket }} --}}
                                 </td>
                                 <td>{{ $data->total_harga}}</td>
+                                <th>@if($data->status == 1) Selesai @else Proses @endif</th>
+                                <th>
+                                    <a href="{{ route('admin.show', $data->id) }}">invoice</a>
+                                </th>
                                 <td class="d-flex">
                                     <a href="{{ route('admin.edit', $data->id) }}">
                                         <div class="btn-group btn-group-sm">

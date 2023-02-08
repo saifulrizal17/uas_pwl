@@ -36,8 +36,7 @@ class UserController extends Controller
             'alamat' => $request->alamat,
             'berat' => $request->berat,
             'jenis_paket' => $request->jenis_paket,
-
-        
+            'total_harga' => $request->jenis_paket * $request->berat,
         ]);
 
         return redirect()->route('user');
