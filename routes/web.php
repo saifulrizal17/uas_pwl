@@ -33,8 +33,6 @@ Route::prefix('/')->middleware('auth','isAdmin')->group(function(){
     Route::get('/edit/{id}', [LaundryController::class, 'edit'])->name('edit');
     // Route::get('/update/{id}', [LaundryController::class, 'update'])->name('update');
     Route::get('/delete/{id}', [LaundryController::class, 'destroy'])->name('destroy');
-
-  
 });
 
 
