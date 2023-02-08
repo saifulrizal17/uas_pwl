@@ -24,11 +24,11 @@ class AdminMiddleware
             if(Auth::user()->role == '1'){
                 return $next($request);
             } else {
-                return redirect('/user')->with('message', 'Bukan Admin Coy');
+                return redirect('/user');
             };
         } else {
-            return redirect('/login')->with('message', 'Login dulu kawan');
+            return redirect('/login');
         }
-        return $next($request);
+        // return $next($request);
     }
 }
