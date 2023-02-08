@@ -20,6 +20,7 @@ return new class extends Migration
             $table->BigInteger('nomerhp');
             $table->integer('berat');
             $table->integer('jenis_paket');
+            $table->integer('total_harga');
             $table->timestamps();
         });
     }

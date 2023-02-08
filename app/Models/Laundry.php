@@ -14,6 +14,7 @@ class Laundry extends Model
   'nomerhp',
   'alamat',
   'berat',
-  'jenis_paket'
+  'jenis_paket',
+  'total_harga'
     ];
 }

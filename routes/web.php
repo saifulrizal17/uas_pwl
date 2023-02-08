@@ -23,6 +23,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('user', [HomeController::class, 'index'])->name('user');
 Route::post('user', [UserController::class, 'store'])->name('store');
+Route::get('user/list', [UserController::class, 'index'])->name('index');
 
 
 
