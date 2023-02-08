@@ -83,6 +83,11 @@
                   </table>
                   {{ $datas->links('pagination::bootstrap-5')}}
             </div>
+            <select class="form-select" name="nama" id="nama">
+                @foreach ($datas as $data)
+                    <option value="{{$data->nama}}">{{$data->nama}}</option>
+                @endforeach
+            </select>
         </div>
     </div>
 </div>
