@@ -22,8 +22,8 @@ Route::get('/', function () {
 // Login User 
 Auth::routes();
 Route::get('user', [HomeController::class, 'index'])->name('user');
-Route::post('user', [UserController::class, 'store'])->name('store');
-Route::get('user/list', [UserController::class, 'index'])->name('index');
+Route::post('user', [UserController::class, 'store'])->middleware('auth')->name('store');
+Route::get('user/list', [UserController::class, 'index'])->middleware('auth')->name('index');
 
 // Login Admin
 Route::resource('/admin', LaundryController::class)->middleware(['auth','isAdmin']);
