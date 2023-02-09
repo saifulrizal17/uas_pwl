@@ -71,7 +71,7 @@
                                     <input type="text" class="form-control" id="nama" name="nomerhp" aria-label="nomerhp" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Bobot" id="berat" name="berat" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input type="text" class="form-control" placeholder="Berat" id="berat" name="berat" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <span class="input-group-text" id="basic-addon2">Kg</span>
                                 </div>
                                 <div class="form-group row px-2">

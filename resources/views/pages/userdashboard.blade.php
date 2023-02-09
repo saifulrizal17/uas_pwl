@@ -20,10 +20,10 @@
                     <thead>
                       <tr>
                         <th scope="col">No</th>
-                        <th scope="col">nama</th>
-                        <th scope="col">alamat</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Alamat</th>
                         <th scope="col">Nomor HP</th>
-                        <th scope="col">berat</th>
+                        <th scope="col">Berat</th>
                         <th scope="col">Jenis Paket</th>
                         <th scope="col">Total Harga</th>
                         <th scope="col">Status</th>
@@ -37,14 +37,13 @@
                                 <th>{{ $data->alamat }}</th>
                                 <td>{{ $data->nomerhp }}</td>
                                 <th>{{ $data->berat }}</th>
-                                <td>@if($data->jenis_paket  === 8000)
+                                <td>@if($data->jenis_paket  === 10000)
                                     Paket A
                                     @elseif($data->jenis_paket  === 5000)
                                     Paket B
-                                    @else
+                                    @elseif($data->jenis_paket  === 15000)
                                     Paket C
                                     @endif
-                                    {{-- {{ $data->jenis_paket }} --}}
                                 </td>
                                 <td>{{ $data->total_harga}}</td>
                                 <th>@if($data->status == 1) Selesai @else Proses @endif</th>
