@@ -24,6 +24,13 @@ role
 
 library
 - html2canvas : untuk mencetak div menjadi gambar
+
+Kelompok 2 Laundry :
+- 20104410085-Aji Budi Santoso 
+- 20104410071-Dimas Andriano Herlambang 
+- 20104410067-Saiful Rizal 
+- 20104410078-Donny damara nanda putra arifin 
+- 20104410080-Bima Prasetiya 
 ## Cara Install
 ```shell
     git clone https://github.com/saifulrizal17/uas_pwl.git
